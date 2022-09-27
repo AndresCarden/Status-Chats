@@ -29,7 +29,7 @@ const users = require('./routes/usersRoutes');
 const chats = require('./routes/chatsRoutes');
 const messages = require('./routes/messagesRoutes');
 
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -63,7 +63,7 @@ users(app, upload);
 chats(app);
 messages(app, upload);
 
-server.listen(PORT, '0.0.0.0' || 'localhost', function() {
+server.listen(port, '0.0.0.0' || 'localhost', function() {
     console.log('Aplicacion de NodeJS ' + port + ' Iniciada...')
 });
 
